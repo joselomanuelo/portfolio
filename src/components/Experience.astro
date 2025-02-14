@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "August 2024 - December 2024",
+    title: "Backend Developer at Universidad de Antioquia",
+    description:
+      "In this role, I was tasked with improving an application whose primary functionality involved constantly reading from a MongoDB database undergoing frequent mutations and serving an API for a larger project. Upon conducting an initial review, it became clear that a complete rewrite was necessary to address the existing limitations and ensure long-term maintainability.I led the redesign process by applying best practices that extended beyond academic-level approaches and focused on real-world application standards. The solution was built using Python's Flask framework and implemented Domain-Driven Design (DDD) principles to establish a robust, scalable, and maintainable architecture.",
+  },
+  {
+    date: "April 2022 - January 2024",
+    title: "Full-stack Developer Specialist at Evertec",
+    description:
+      "Contributed to a variety of technical projects, including developing Livewire templates for financial data visualization, ensuring seamless user experiences. Implemented SOAP connections to enhance the core transaction framework, enabling reliable and efficient communication within the company’s systems. Additionally, designed and deployed APIs to facilitate integrations with Ecuadorian business partners and multiple financial institutions, streamlining operations and fostering collaborative growth.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
