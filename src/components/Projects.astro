@@ -1,0 +1,31 @@
+---
+const PROJECTS = [
+  {
+    title: "Ecoblock",
+    description: "Ecoblock landing page",
+    github: "https://github.com/escafandra/Ecoblock",
+    link: "https://ecoblock.com.co/",
+    image: "/projects/ecoblock.webp",
+    tags: ["Laravel", "livewire", "tailwindcss"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, github, link, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg text-pretty mb-4">{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`screenshot of ${title}`}
+      />
+    </article>
+  ))
+}
