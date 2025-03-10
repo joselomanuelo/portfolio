@@ -3,6 +3,7 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import LinkIcon from "./icons/LinkIcon.astro";
 import LinkButton from "./LinkButton.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
+import LaravelIcon from "./icons/LaravelIcon.astro";
 
 const TAGS = {
   TAILWIND: {
@@ -10,16 +11,32 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
   },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-gray-200 text-red-500",
+    icon: LaravelIcon,
+  },
 };
 
 const PROJECTS = [
   {
-    title: "Ecoblock",
-    description: "Ecoblock landing page. Developed with Tailwind CSS.",
-    github: "https://github.com/escafandra/Ecoblock",
-    link: "https://ecoblock.com.co/",
-    image: "/projects/ecoblock.webp",
-    tags: [TAGS.TAILWIND],
+    title: "Gama",
+    description:
+      "This application is used by a company that manages real estate properties owned by banks. The company is responsible for handling utility payments, insurance, repairs, and overseeing the various caretakers residing in the properties.",
+    github: "https://github.com/gamaservices/gama-app",
+    link: "https://gama.josemanuel.website/",
+    image: "/projects/gama.webp",
+    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+  },
+
+  {
+    title: "Ecommerce",
+    description:
+      "This is a basic e-commerce platform with an administration system built in Filament, with a strong focus on managing sales orders.",
+    github: "https://github.com/androsdigital/ecommerce",
+    link: "https://eccomerce.josemanuel.website/",
+    image: "/projects/ecommerce.webp",
+    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
   },
 ];
 ---
