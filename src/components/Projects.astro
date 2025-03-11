@@ -26,7 +26,7 @@ const PROJECTS = [
     github: "https://github.com/gamaservices/gama-app",
     link: "https://gama.josemanuel.website/",
     image: "/projects/gama.webp",
-    admin: "https://gama.josemanuel.website/admin/login",
+    panel: "https://gama.josemanuel.website/admin/login",
     tags: [TAGS.LARAVEL, TAGS.TAILWIND],
   },
 
@@ -36,7 +36,7 @@ const PROJECTS = [
       "This is a basic e-commerce platform with an administration system built in Filament, with a strong focus on managing sales orders.",
     github: "https://github.com/androsdigital/ecommerce",
     link: "https://ecommerce.josemanuel.website/",
-    admin: "https://ecommerce.josemanuel.website/admin/login",
+    panel: "https://ecommerce.josemanuel.website/admin/login",
     image: "/projects/ecommerce.webp",
     tags: [TAGS.LARAVEL, TAGS.TAILWIND],
   },
@@ -45,7 +45,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16 px-4">
   {
-    PROJECTS.map(({ image, title, description, tags, link, admin, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, panel, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -92,8 +92,8 @@ const PROJECTS = [
                   Preview
                 </LinkButton>
               )}
-              {admin && (
-                <LinkButton href={admin}>
+              {panel && (
+                <LinkButton href={panel}>
                   <LinkIcon class="size-4" />
                   Admin Panel
                 </LinkButton>
