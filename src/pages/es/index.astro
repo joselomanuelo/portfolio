@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import AboutMe from "../../components/AboutMe.astro";
+import Briefcase from "../../components/icons/BriefcaseIcon.astro";
+import CodeIcon from "../../components/icons/CodeIcon.astro";
+import Experience from "../../components/Experience.astro";
+import ProfileCheck from "../../components/icons/ProfileCheckIcon.astro";
+import Projects from "../../components/Projects.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Hero from "../../components/Hero.astro";
+import TitleSection from "../../components/TitleSection.astro";
+---
+
+<Layout
+  title="Portfolio of Jose Manuel García Rodríguez"
+  description="Welcome to my portfolio — a glimpse into my skills, experience, projects, and the person behind the code."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
+  </main>
+  <div class="space-y-24">
+    <SectionContainer id="experience">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experience
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Projects
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        About me
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+</Layout>
