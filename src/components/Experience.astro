@@ -1,21 +1,24 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const EXPERIENCE = [
   {
-    date: "August 2024 - December 2024",
-    title: "Backend Developer",
-    company: "University of Antioquia",
-    description:
-      "In this role, I was tasked with improving an application whose primary functionality involved constantly reading from a MongoDB database undergoing frequent mutations and serving an API for a larger project. Upon conducting an initial review, it became clear that a complete rewrite was necessary to address the existing limitations and ensure long-term maintainability.I led the redesign process by applying best practices that extended beyond academic-level approaches and focused on real-world application standards. The solution was built using Python's Flask framework and implemented Domain-Driven Design (DDD) principles to establish a robust, scalable, and maintainable architecture.",
+    date: t("experience.udea.date"),
+    title: t("experience.udea.title"),
+    company: t("experience.udea.company"),
+    description: t("experience.udea.description"),
     link: "https://impactu.colav.co",
+    github: "https://github.com/colav/quyca",
   },
   {
-    date: "April 2022 - January 2024",
+    date: t("experience.evertec.date"),
     title: "Full-stack Developer Specialist",
     company: "Evertec",
-    description:
-      "Contributed to a variety of technical projects, including developing Livewire templates for financial data visualization, ensuring seamless user experiences. Implemented SOAP connections to enhance the core transaction framework, enabling reliable and efficient communication within the company’s systems. Additionally, designed and deployed APIs to facilitate integrations with Ecuadorian business partners and multiple financial institutions, streamlining operations and fostering collaborative growth.",
+    description: t("experience.evertec.description"),
   },
 ];
 ---

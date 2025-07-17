@@ -1,5 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const personalImageAlt = "José Manuel";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <article
@@ -9,37 +13,23 @@ const personalImageAlt = "José Manuel";
     class="px-4 [&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      I'm a versatile developer driven by a passion for technology and lifelong
-      learning.
+      {t("about_me.first_paragraph")}
     </p>
 
     <p>
-      I bring a unique perspective shaped by my multidisciplinary background as
-      a mathematics teacher and educational entrepreneur. This experience has
-      strengthened my analytical skills and my ability to tackle complex
-      problems, transforming challenges into innovative and effective solutions.
+      {t("about_me.second_paragraph")}
     </p>
 
     <p>
-      Thanks to these abilities, I successfully completed Evertec’s junior
-      developer training program in just four months, despite it being designed
-      to last six. Moreover, upon completing the program, I was hired directly
-      as a middle developer instead of a junior developer.
+      {t("about_me.third_paragraph")}
     </p>
 
     <p>
-      The following year, I had the opportunity to apply my teaching skills by
-      becoming an instructor for the same course I had taken to join the
-      company. My teaching focused on strengthening programming logic and
-      helping students develop a more intuitive and confident approach to
-      coding.
+      {t("about_me.fourth_paragraph")}
     </p>
 
     <p>
-      This ability to learn quickly also enabled me to take on my work at the
-      University of Antioquia with great efficiency, allowing me to complete the
-      project in just a few months. I was able to adapt seamlessly, even though
-      the technologies used were initially unfamiliar to me.
+      {t("about_me.fifth_paragraph")}
     </p>
   </div>
 

@@ -1,25 +1,34 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import LanguagePicker from "./LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const navItems = [
   {
-    title: "Experience",
+    title: t("header.experience.title"),
     label: "experience",
-    url: "/#experience",
+    url: translatePath("/#experience"),
   },
   {
-    title: "Projects",
+    title: t("header.projects.title"),
     label: "projects",
-    url: "/#projects",
+    url: translatePath("/#projects"),
   },
   {
-    title: "About me",
+    title: t("header.about_me.title"),
     label: "about-me",
-    url: "/#about-me",
+    url: translatePath("/#about-me"),
   },
   {
-    title: "Contact",
+    title: t("header.contact.title"),
     label: "contact",
     url: "mailto:joselomanuelo@gmail.com",
   },
