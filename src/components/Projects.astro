@@ -4,6 +4,10 @@ import LinkIcon from "./icons/LinkIcon.astro";
 import LinkButton from "./LinkButton.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
 import LaravelIcon from "./icons/LaravelIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const TAGS = {
   TAILWIND: {
@@ -21,23 +25,11 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Gama",
-    description:
-      "This application is used by a company that manages real estate properties owned by banks. The company is responsible for handling utility payments, insurance, repairs, and overseeing the various caretakers residing in the properties.",
+    description: t("projects.gama.description"),
     github: "https://github.com/gamaservices/gama-app",
     link: "https://gama.josemanuel.website/",
     image: "/projects/gama.webp",
     panel: "https://gama.josemanuel.website/admin/login",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
-  },
-
-  {
-    title: "Ecommerce",
-    description:
-      "This is a basic e-commerce platform with an administration system built in Filament, with a strong focus on managing sales orders.",
-    github: "https://github.com/androsdigital/ecommerce",
-    link: "https://ecommerce.josemanuel.website/",
-    panel: "https://ecommerce.josemanuel.website/admin/login",
-    image: "/projects/ecommerce.webp",
     tags: [TAGS.LARAVEL, TAGS.TAILWIND],
   },
 ];
@@ -83,19 +75,19 @@ const PROJECTS = [
               {github && (
                 <LinkButton href={github}>
                   <GitHubIcon class="size-6" />
-                  Code
+                  {t("code")}
                 </LinkButton>
               )}
               {link && (
                 <LinkButton href={link}>
                   <LinkIcon class="size-4" />
-                  Preview
+                  Web
                 </LinkButton>
               )}
               {panel && (
                 <LinkButton href={panel}>
                   <LinkIcon class="size-4" />
-                  Admin Panel
+                  {t("admin_panel")}
                 </LinkButton>
               )}
             </footer>

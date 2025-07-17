@@ -1,5 +1,11 @@
 ---
-import LinkInline from "./LinkInline.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   title: string;
@@ -7,9 +13,10 @@ interface Props {
   description: string;
   link?: string;
   date: string;
+  github?: string;
 }
 
-const { title, company, description, link, date } = Astro.props;
+const { title, company, description, link, date, github } = Astro.props;
 ---
 
 <div
@@ -36,26 +43,18 @@ const { title, company, description, link, date } = Astro.props;
     {description}
     {
       link && (
-        <LinkInline href={link}>
-          See more{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </>
-          </svg>
-        </LinkInline>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHubIcon class="size-6" />
+              {t("code")}
+            </LinkButton>
+          )}
+          <LinkButton href={link}>
+            <LinkIcon class="size-4" />
+            Web
+          </LinkButton>
+        </footer>
       )
     }
   </div>
