@@ -14,6 +14,7 @@ export const ui = {
     "hero.description":
       "I specialize in building efficient and scalable web solutions that address real business needs. My strongest skills are in Laravel, PHP, and Filament and I also work confidently with Python, Flask, SQL, and MongoDB. I use Git and GitHub daily, and I'm experienced in agile methodologies and collaborative team environments. I'm based in Medellín, Colombia 🇨🇴 and always eager to contribute to impactful, well-structured projects.",
     "hero.contact": "Contact Me",
+    "hero.cv": "/CV_JOSE_MANUEL_GARCIA_EN.pdf",
 
     "about_me.first_paragraph":
       "I'm a versatile developer driven by a passion for technology and lifelong learning.",
@@ -54,6 +55,7 @@ export const ui = {
     "hero.description":
       "Me especializo en desarrollar soluciones web eficientes y escalables que responden a necesidades reales del negocio. Mis habilidades más fuertes están en Laravel, PHP y Filament, y también trabajo con confianza en Python, Flask, SQL y MongoDB. Uso Git y GitHub a diario, y tengo experiencia en metodologías ágiles y entornos de trabajo colaborativos. Vivo en Medellín, Colombia 🇨🇴 y siempre estoy dispuesto a contribuir en proyectos bien estructurados y con impacto.",
     "hero.contact": "Contáctame",
+    "hero.cv": "/CV_JOSE_MANUEL_GARCIA_ES.pdf",
 
     "about_me.first_paragraph":
       "Soy un desarrollador versátil, impulsado por la pasión por la tecnología y el aprendizaje continuo.",

@@ -1,4 +1,5 @@
 ---
+import ProfileIcon from "./icons/ProfileIcon.astro";
 const personalImageAlt = "José Manuel";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
@@ -38,6 +39,10 @@ const t = useTranslations(lang);
     {t("hero.description")}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href={t("hero.cv")} download>
+      <ProfileIcon class="size-5" />
+      CV
+    </SocialPill>
     <SocialPill href="mailto:joselomanuelo@gmail.com">
       <MailIcon class="size-4" />
       {t("hero.contact")}
