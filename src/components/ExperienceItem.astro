@@ -7,8 +7,15 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+interface Tag {
+  name: string;
+  class: string;
+  icon: any;
+}
+
 interface Props {
   title: string;
+  tags: Tag[];
   company: string;
   description: string;
   link?: string;
@@ -16,7 +23,7 @@ interface Props {
   github?: string;
 }
 
-const { title, company, description, link, date, github } = Astro.props;
+const { title, company, description, link, date, github, tags } = Astro.props;
 ---
 
 <div
@@ -40,6 +47,20 @@ const { title, company, description, link, date, github } = Astro.props;
   <div
     class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
   >
+    <ul class="flex flex-row mb-2 gap-x-2">
+      {
+        tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
     {description}
     {
       link && (

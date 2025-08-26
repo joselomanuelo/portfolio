@@ -1,9 +1,60 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import LaravelIcon from "./icons/LaravelIcon.astro";
+import MySqlIcon from "./icons/MySQLIcon.astro";
+import PythonIcon from "./icons/PythonIcon.astro";
+import PHPIcon from "./icons/PHPIcon.astro";
+import MongoDBIcon from "./icons/MongoDBIcon.astro";
+import FlaskIcon from "./icons/FlaskIcon.astro";
+import DockerIcon from "./icons/DockerIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#003159] text-white",
+    icon: LaravelIcon,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#003159] text-white",
+    icon: MySqlIcon,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: PythonIcon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#003159] text-white",
+    icon: PHPIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: MongoDBIcon,
+  },
+  FLASK: {
+    name: "Flask",
+    class: "bg-[#003159] text-white",
+    icon: FlaskIcon,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#003159] text-white",
+    icon: DockerIcon,
+  },
+};
 
 const EXPERIENCE = [
   {
@@ -13,12 +64,14 @@ const EXPERIENCE = [
     description: t("experience.udea.description"),
     link: "https://impactu.colav.co",
     github: "https://github.com/colav/quyca",
+    tags: [TAGS.PYTHON, TAGS.FLASK, TAGS.MONGODB, TAGS.DOCKER],
   },
   {
     date: t("experience.evertec.date"),
     title: "Full-stack Developer Specialist",
     company: "Evertec",
     description: t("experience.evertec.description"),
+    tags: [TAGS.PHP, TAGS.LARAVEL, TAGS.MYSQL, TAGS.DOCKER, TAGS.TAILWIND],
   },
 ];
 ---

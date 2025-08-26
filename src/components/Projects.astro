@@ -5,6 +5,7 @@ import LinkButton from "./LinkButton.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
 import LaravelIcon from "./icons/LaravelIcon.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import MySqlIcon from "./icons/MySQLIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -20,6 +21,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: LaravelIcon,
   },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#003159] text-white",
+    icon: MySqlIcon,
+  },
 };
 
 const PROJECTS = [
@@ -30,7 +36,7 @@ const PROJECTS = [
     link: "https://aquacore.josemanuel.website/",
     image: "/projects/aquacore.webp",
     panel: "https://aquacore.josemanuel.website/admin/login",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+    tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.MYSQL],
   },
   {
     title: "Gama",
@@ -39,7 +45,7 @@ const PROJECTS = [
     link: "https://gama.josemanuel.website/",
     image: "/projects/gama.webp",
     panel: "https://gama.josemanuel.website/admin/login",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+    tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.MYSQL],
   },
 ];
 ---
