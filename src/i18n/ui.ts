@@ -45,6 +45,8 @@ export const ui = {
 
     "projects.gama.description":
       "This application is used by a company that manages real estate properties owned by banks. The company is responsible for handling utility payments, insurance, repairs, and overseeing the various caretakers residing in the properties.",
+    "projects.aquacore.description":
+      "This application provides a comprehensive solution for managing dive centers. It allows you to organize dives, courses, and certifications, and includes an automated and scheduled task system for staff. It also streamlines inventory and equipment status control, enables assigning gear to divers for each dive, and, most importantly, simplifies the accounting management of the dive center.",
 
     code: "Code",
     admin_panel: "Admin Panel",
@@ -86,7 +88,8 @@ export const ui = {
 
     "projects.gama.description":
       "Esta aplicación es utilizada por una empresa que administra bienes raíces propiedad de bancos. La empresa se encarga de gestionar los pagos de servicios públicos, seguros, reparaciones y supervisar a los diferentes cuidadores que residen en las propiedades.",
-
+    "projects.aquacore.description":
+      "Esta aplicación ofrece una solución integral para la gestión de centros de buceo. Permite administrar inmersiones, cursos y certificaciones, además de contar con un sistema de tareas automáticas y programadas para los trabajadores. También facilita el control del inventario y del estado de los equipos, la asignación de estos a los buzos en cada inmersión y, de forma destacada, la gestión contable del centro de buceo.",
     code: "Código",
     admin_panel: "Panel",
   },
